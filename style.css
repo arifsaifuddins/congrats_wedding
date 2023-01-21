@@ -14,17 +14,24 @@ body {
 }
 
 .container {
-  position: relative;
+  position: absolute;
+  margin: 0 auto;
+  width: 500px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container1 {
+  position: absolute;
   margin: 0 auto;
   width: 500px;
   height: 100vh;
 }
 
 .congrats {
-  padding-top: 50px;
-  width: 500px;
-  height: 100vh;
-  position: absolute;
+  margin: auto;
   display: flex;
   z-index: 2;
   text-align: center;
@@ -171,6 +178,7 @@ body {
   body,
   .congrats,
   .cover,
+  .container1,
   .container {
     width: 100vw;
   }
