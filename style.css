@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #d2e0aa;
+  font-family: 'Poppins';
+}
+
+body {
+  min-height: 100vh;
+  background-color: #020813;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 500px;
+  height: 100vh;
+}
+
+.congrats {
+  padding-top: 50px;
+  width: 500px;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  text-align: center;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doa {
+  font-family: 'Alexandria';
+  font-weight: 500;
+  color: rgb(230, 195, 39);
+}
+
+.names {
+  margin: 60px 0;
+  width: 280px;
+  position: relative;
+}
+
+.h,
+.a,
+.names p {
+  font-family: 'Freehand';
+}
+
+.a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.h {
+  position: absolute;
+}
+
+.names p {
+  padding-top: 28px;
+  padding-bottom: 10px;
+  font-size: 100px;
+  color: rgb(230, 195, 39);
+}
+
+.cover {
+  position: absolute;
+  margin: 0 auto;
+  width: 500px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #020813;
+  z-index: 990;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(0);
+  transition: transform 1s;
+}
+
+.cover.open {
+  transform: translateY(-100%);
+}
+
+.cover .wrap {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cover .wrap h1 {
+  font-family: 'Freehand';
+}
+
+.cover .wrap img {
+  margin-bottom: 30px;
+  margin-right: 10px;
+  margin-top: -100px;
+}
+
+.effect {
+  position: absolute;
+  margin-top: 30px;
+  width: 150px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 20px 30px 90px #aacfe0;
+  z-index: -2;
+  background: transparent;
+}
+
+.cover .wrap button {
+  display: inline-block;
+  padding: 10px 50px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: transform .3s;
+  background-color: #4a8099;
+}
+
+.cover .wrap button:hover {
+  background-color: #355c6e;
+  transform: scale(103%);
+}
+
+.bubbles {
+  position: relative;
+  display: flex;
+}
+
+.bubbles span {
+  position: relative;
+  width: 20px;
+  height: 10px;
+  background-color: #4a8099;
+  margin: 0 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 10px #2b363d, 0 0 40px #aacfe0, 0 0 100px #aacfe0;
+  animation: up 3.5s linear infinite;
+  animation-delay: calc(100s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+  background-color: #63994a;
+  box-shadow: 0 0 5px 10px #2b3d30, 0 0 40px #d2e0aa, 0 0 100px #dae0aa;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+@media screen and (max-width:700px) {
+
+  body,
+  .congrats,
+  .cover,
+  .container {
+    width: 100vw;
+  }
+}
